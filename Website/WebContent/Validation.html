@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="styles.css" rel="stylesheet">
+<meta charset="ISO-8859-1">
+<title>Validation</title>
+<script type="text/javascript">
+	function submitFn() {
+		var x = document.forms["validationForm"]["name"].value;
+		var y = document.forms["validationForm"]["password"].value;
+		if ((x == null) && (y == null)) {
+			alert("Enter username / password");
+		} else if ((x == "niit") && (y == "niit")) {
+			alert("welcome");
+			alert(x);
+			//window.location = "ProductPage.jsp"
+
+		} else {
+			alert("invalid Username / Password")
+		}
+	
+	}
+</script>
+</head>
+<body>
+	<form name="validationForm" onsubmit="submitFn()" action="product.html">
+		User Name:<input type="text" name="name" required> <br>Password:<input
+			type="password" name="password" required> <br> <input
+			type="submit" value="Submit">
+	</form>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<STYLE>
+#button {
+	margin-left: 50px;
+}
+
+.autostyle2 {
+	color: red;
+	font-size: 20px;
+	text-align: center;
+}
+</STYLE>
+<script type="text/javascript">
+	function submitting(form) {
+		document.write(form.pid.value);
+		document.write(form.pname.value);
+		document.write(form.ppr.value);
+		document.write(form.pqu.value);
+
+	}
+</script>
+</head>
+<BODY bgcolor="#FFEBCD">
+
+	<FORM name="productDetails" novalidate>
+		<table>
+			<TR class="autostyle2">
+				<TD colspan="2">Product Details</TD>
+			</TR>
+			<TR>
+				<TD WIDTH="100%" COLSPAN="2"></TD>
+			</TR>
+
+			<TR>
+				<TD><LABEL for="pi">Product Id:</LABEL></TD>
+				<TD><INPUT type="text" name="pid" id="pi"
+					placeholder="Enter Product ID" required></TD>
+			</TR>
+
+
+			<TR>
+				<TD><LABEL for="pn"> Product Name:</LABEL></TD>
+				<TD><INPUT type="text" name="pname" id="pn"
+					placeholder="Enter Product name" required></TD>
+			</TR>
+			<tr>
+				<TD><LABEL for="pp">Product Price:</LABEL></TD>
+				<TD><INPUT type="number" name="ppr" id="pp"
+					placeholder="Enter Product Price" required></TD>
+			</TR>
+
+
+			<tr>
+				<TD><LABEL for="pq">Product Quantity:</LABEL></TD>
+				<TD><INPUT type="number" name="pqu" id="pq"
+					placeholder="Enter Product Quantity" required></TD>
+			</TR>
+
+			<TR>
+				<TD>
+					<BUTTON id="button" type="submit" onClick="submitting(this.form)">
+						<P>Submit</P>
+					</BUTTON>
+				</TD>
+				<TD>
+					<BUTTON type="reset">
+						<P>Reset</P>
+					</BUTTON>
+				</TD>
+			</TR>
+
+
+
+		</table>
+	</FORM>
+
+</body>
+</html>
+
+
+
+
+

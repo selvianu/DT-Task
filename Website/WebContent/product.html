@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="styles.css" rel="stylesheet">
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function displayFn(form) {
+		document.write(form.pid.value);
+		document.write(form.pname.value);
+		document.write(form.price.value);
+		document.write(form.quantity.value);
+	}
+</script>
+</head>
+<body>
+	<h3>Enter the Product Details</h3>
+	<p id="demo"></p>
+	<form name="productdisplay" >
+
+		Enter ProductID: <input type="text" name="pid"> <br> <br>
+		Enter ProductName: <input type="text" name="pname"> <br>
+		<br> Enter ProductPrice: <input type="text" name="price">
+		<br> <br> Enter ProductQuantity: <input type="text"
+			name="quantity"> <br> <br>
+		<!-- <input type="submit"
+			value="display"> -->
+		<BUTTON id="button" type="submit" onClick="displayFn(this.form)">
+			<P>Submit</P>
+		</BUTTON>
+	</form>
+</body>
+</html>
