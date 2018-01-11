@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#hide").click(function() {
+			$("a").hide();
+
+		});
+
+		$("#show").click(function() {
+			$("a").show();
+		});
+		$("input").click(function() {
+			$("#div1").fadeToggle();
+		});
+
+		$("button").click(function() {
+			$("div").animate({
+				left : '250px',
+				opacity : '0.5',
+				height : '150px',
+				width : '150px'
+			});
+		});
+
+	});
+
+	function zoomin() {
+		var myImg = document.getElementById("flower");
+		var currWidth = myImg.clientWidth;
+		if (currWidth == 500) {
+			alert("Maximum zoom-in level reached.");
+		} else {
+			myImg.style.width = (currWidth + 50) + "px";
+		}
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Image - Hide/Show</title>
+</head>
+<body>
+	<br>
+
+	<div id="div1" align="right">
+		<h2>
+			<p>This is the demo to fade out and fade in</p>
+		</h2>
+
+	</div>
+	<br>
+	<!-- 	<a href="#"> <img src="i1.jpg" style="width: 200px; height: 200px;"></a>
+ -->
+	<br>
+	<br>
+	<!-- <button id="hide">Hide</button>
+
+	<button id="show">Show</button> -->
+	<button type="button" onclick="zoomin()">Increase</button>
+	<br>
+	<br>
+	<div>
+		<img src="2i.jpg" id="flower" style="width: 200px;">
+	</div>
+	<input type="button" value="Click to fade out / in"
+		style="float: right;">
+	<!-- <button>Click to fade out / in</button> -->
+
+	<br>
+
+	<br>
+
+</body>
+</html>
